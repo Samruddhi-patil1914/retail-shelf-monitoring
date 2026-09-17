@@ -30,7 +30,7 @@ Developed strictly in accordance with the project's **Overview**, **Product Requ
 
 ---
 
-## ??? System Architecture & Workflow
+## System Architecture & Workflow
 
 ```text
 +-----------------------------+
@@ -73,7 +73,7 @@ Developed strictly in accordance with the project's **Overview**, **Product Requ
 
 ---
 
-## ?? Project Directory Structure
+## Project Directory Structure
 
 ```text
 retail_shelf_monitoring/
