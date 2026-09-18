@@ -60,45 +60,27 @@ Retail stores need efficient ways to monitor shelf availability, product placeme
 
 ## System Architecture & Workflow
 
-```text
-+-----------------------------+
-| Image Input (JPG / PNG)     |
-+-------------+---------------+
-              |
-              v
-+-----------------------------+
-| Preprocessing (OpenCV/PIL)  |
-| Resize, Normalize, CLAHE    |
-+-------------+---------------+
-              |
-              v
-+-----------------------------+
-| YOLOv8n Object Detector     |
-| Bounding Boxes, Classes,    |
-| Confidence Scores           |
-+-------------+---------------+
-              |
-              v
-+-----------------------------+
-| Shelf Analysis Core         |
-| - Product Counter           |
-| - Empty-Space Detection     |
-| - Misplacement Detection    |
-| - Occupancy Analysis        |
-+-------------+---------------+
-              |
-              v
-+-----------------------------+
-| SQLite Database Logging     |
-| Zones, Detections, Reports  |
-+-------------+---------------+
-              |
-              v
-+-----------------------------+
-| Streamlit Web Dashboard     |
-| Charts, Alerts, Exports     |
-+-----------------------------+
+```mermaid
+## System Architecture & Workflow
 
+flowchart TD
+    A[Image Input<br>JPG / PNG] --> B[Preprocessing<br>OpenCV / PIL<br>Resize & Normalize]
+    B --> C[YOLOv8 Object Detection<br>Products & Bounding Boxes]
+    C --> D[Shelf Analysis]
+
+    D --> D1[Product Counting]
+    D --> D2[Empty-Space Detection]
+    D --> D3[Misplacement Detection]
+    D --> D4[Occupancy Analysis]
+
+    D1 --> E[SQLite Database]
+    D2 --> E
+    D3 --> E
+    D4 --> E
+
+    E --> F[Streamlit Web Dashboard]
+    F --> G[Charts & Alerts]
+    F --> H[Reports & Export]
 ---
 
 ## Project Directory Structure
