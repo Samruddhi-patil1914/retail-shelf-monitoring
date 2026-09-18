@@ -21,7 +21,7 @@ Developed strictly in accordance with the project's **Overview**, **Product Requ
 
 ---
 
-## ?? Table of Contents
+## Table of Contents
 1. [Project Objectives](#-project-objectives)
 2. [System Architecture & Workflow](#-system-architecture--workflow)
 3. [Project Directory Structure](#-project-directory-structure)
