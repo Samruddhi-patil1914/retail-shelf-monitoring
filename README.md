@@ -1,8 +1,23 @@
 # Retail Shelf Monitoring Using Computer Vision and Data Science
 
+# 🛒 Retail Shelf Monitoring
+
+### AI-Powered Computer Vision System for Smart Retail Analytics
+
+Retail Shelf Monitoring is a computer vision and data science project designed to analyze retail shelf images, detect products, monitor shelf availability, identify misplaced products, and provide actionable shelf analytics through an interactive Streamlit dashboard.
+
+**Technologies:** Python • YOLOv8 • OpenCV • Streamlit • SQLite • Pandas
+
+---
+
 An end-to-end automated computer vision system for analyzing retail store shelves to detect products, count on-shelf inventory, identify empty or low-stock zones, flag misplaced items (planogram compliance), calculate shelf health scores, and present real-time actionable analytics through a modern Streamlit web dashboard.
 
 Developed strictly in accordance with the project's **Overview**, **Product Requirements Document (PRD)**, and **Technical Requirements Document (TRD)**.
+
+---
+**Author:** Samruddhi Patil  
+**Course:** B.Sc. Data Science — Third Year  
+**College:** Indira College of Commerce and Science, Pune
 
 ---
 
@@ -27,6 +42,34 @@ Developed strictly in accordance with the project's **Overview**, **Product Requ
 4. **Misplacement Detection (Planogram Compliance)**: Compare detected items against assigned shelf zones and flag misplaced products visually.
 5. **Shelf Health Scoring**: Compute composite 0?100% health scores and assign statuses (*Good*, *Needs Attention*, *Critical*).
 6. **Interactive Dashboard & Reporting**: Visualize side-by-side computer vision overlays, telemetry charts, and provide downloadable CSV audits and annotated images.
+
+---
+## ✨ Key Features
+
+- 📷 **Shelf Image Analysis** — Upload retail shelf images for AI-based analysis.
+- 🔍 **Product Detection** — Detect products using the YOLOv8 object detection model.
+- 📦 **Product Counting** — Count detected products on the shelf.
+- 🏪 **Shelf Availability Monitoring** — Identify empty and low-stock shelf zones.
+- ⚠️ **Misplaced Product Detection** — Identify products that appear outside their expected shelf zones.
+- 📊 **Interactive Dashboard** — View detection and shelf analytics through a Streamlit dashboard.
+- 🗄️ **Scan History** — Store and review previous shelf analysis results.
+- 📄 **Data Export** — Export analysis results for further use.
+- 📈 **Shelf Health Analysis** — Generate an overall shelf condition score based on detected shelf conditions.
+
+---
+
+## 🛠️ Technologies Used
+| Technology | Purpose |
+|---|---|
+| 🐍 Python | Core programming and data processing |
+| 🤖 YOLOv8 | Product object detection |
+| 👁️ OpenCV | Image processing and computer vision |
+| 📊 Pandas | Data processing and analysis |
+| 📈 Matplotlib | Data visualization |
+| 🌐 Streamlit | Interactive web dashboard |
+| 🗄️ SQLite | Database and scan history storage |
+| 🖼️ PIL | Image handling and processing |
+| 🔧 Git & GitHub | Version control and project hosting |
 
 ---
 
@@ -185,6 +228,75 @@ streamlit run app.py
 Open your web browser and navigate to:
 `http://localhost:8501`
 
+---
+
+## 📊 Dashboard & Results
+
+The Retail Shelf Monitoring system provides an interactive Streamlit dashboard for analyzing shelf images and viewing AI-generated insights.
+
+### Dashboard Modules
+
+- 🔍 **Visual Inspection** — View the uploaded shelf image and AI detection results.
+- 📦 **Stock Analytics** — Analyze product counts and shelf availability.
+- ⚠️ **Operational Alerts** — Identify low-stock, empty, and potentially misplaced shelf conditions.
+- 📋 **Audit Summary** — Review the overall shelf analysis.
+- 📥 **Export Data** — Export analysis results for further use.
+- 🕒 **Scan History** — View previous shelf monitoring scans.
+
+### Key Analysis Metrics
+
+The dashboard can display metrics such as:
+
+- Total Products Detected
+- Misplaced Items
+- Empty Shelf Zones
+- Low-Stock Zones
+- Shelf Health Score
+
+---
+
+## 🏪 Applications / Use Cases
+
+The Retail Shelf Monitoring system can be used in different retail and inventory-management scenarios:
+
+- 🛒 **Supermarkets & Retail Stores** — Monitor shelf conditions and product availability.
+- 📦 **Inventory Monitoring** — Identify low-stock and empty shelf areas.
+- 🔍 **Shelf Compliance** — Check whether products are placed in their expected shelf zones.
+- ⚠️ **Misplacement Detection** — Help identify products that may be placed in incorrect locations.
+- 📊 **Store Analytics** — Generate data-driven insights from shelf images.
+- 🕒 **Routine Shelf Auditing** — Support regular visual inspection of retail shelves.
+
+---
+
+## 🚀 Future Scope
+
+The project can be further enhanced with the following improvements:
+
+- 🎥 **Real-Time Shelf Monitoring** using live camera feeds.
+- 🧠 **Custom YOLO Model Training** for more retail product categories.
+- 📱 **Mobile-Friendly Dashboard** for monitoring from different devices.
+- ☁️ **Cloud Deployment** for remote access and centralized monitoring.
+- 🔔 **Automated Notifications** for critical stock and shelf conditions.
+- 📈 **Advanced Retail Analytics** for tracking shelf conditions over time.
+- 🏷️ **Product Recognition** for identifying specific products and categories.
+- 🔄 **Automated Inventory Integration** with retail inventory systems.
+
+---
+
+## 📚 Project Documentation
+
+Detailed project documents are available in the [`docs`](./docs) folder.
+
+| Document | Description |
+|---|---|
+| 📄 PRD | Product Requirements Document |
+| 📄 FRD | Functional Requirements Document |
+| 📄 TRD | Technical Requirements Document |
+| 📄 Synopsis | Project synopsis and overview |
+| 🎓 College Prompt | College project requirements |
+
+These documents provide detailed information about the project requirements, functionality, technical design, implementation, and academic evaluation.
+  
 ---
 
 ## ??? Database Schema (SQLite)
