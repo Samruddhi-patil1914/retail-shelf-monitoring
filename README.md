@@ -1,41 +1,25 @@
 # Retail Shelf Monitoring Using Computer Vision and Data Science
 
-# 🛒 Retail Shelf Monitoring
+![Python](https://img.shields.io/badge/Python-3.10%2B-blue?style=for-the-badge&logo=python&logoColor=white)
+![Computer Vision](https://img.shields.io/badge/Computer%20Vision-YOLOv8-red?style=for-the-badge)
+![OpenCV](https://img.shields.io/badge/OpenCV-Computer%20Vision-green?style=for-the-badge&logo=opencv&logoColor=white)
+![Framework](https://img.shields.io/badge/Framework-Streamlit-orange?style=for-the-badge&logo=streamlit&logoColor=white)
+![Database](https://img.shields.io/badge/Database-SQLite-yellow?style=for-the-badge&logo=sqlite&logoColor=black)
+![Data](https://img.shields.io/badge/Data-Pandas-blue?style=for-the-badge&logo=pandas&logoColor=white)
+![Numerical](https://img.shields.io/badge/Numerical-NumPy-purple?style=for-the-badge&logo=numpy&logoColor=white)
 
-### AI-Powered Computer Vision System for Smart Retail Analytics
+> **B.Sc. Data Science — Third Year Project**
 
-Retail Shelf Monitoring is a computer vision and data science project designed to analyze retail shelf images, detect products, monitor shelf availability, identify misplaced products, and provide actionable shelf analytics through an interactive Streamlit dashboard.
+An AI-powered computer vision system for retail shelf monitoring that detects products, analyzes shelf availability, identifies misplaced items, and provides actionable insights through an interactive Streamlit dashboard.
 
-**Technologies:** Python • YOLOv8 • OpenCV • Streamlit • SQLite • Pandas
+---
+# 📌 Executive Summary & Problem Statement
+
+Retail stores need efficient ways to monitor shelf availability, product placement, and stock levels. This project uses computer vision to analyze shelf images and provide useful retail insights through an interactive Streamlit dashb#oard.
 
 ---
 
-An end-to-end automated computer vision system for analyzing retail store shelves to detect products, count on-shelf inventory, identify empty or low-stock zones, flag misplaced items (planogram compliance), calculate shelf health scores, and present real-time actionable analytics through a modern Streamlit web dashboard.
-
-Developed strictly in accordance with the project's **Overview**, **Product Requirements Document (PRD)**, and **Technical Requirements Document (TRD)**.
-
----
-**Author:** Samruddhi Patil  
-**Course:** B.Sc. Data Science — Third Year  
-**College:** Indira College of Commerce and Science, Pune
-
----
-
-## Table of Contents
-1. [Project Objectives](#-project-objectives)
-2. [System Architecture & Workflow](#-system-architecture--workflow)
-3. [Project Directory Structure](#-project-directory-structure)
-4. [File-by-File Breakdown](#-file-by-file-breakdown)
-5. [Installation & Setup Guide](#-installation--setup-guide)
-6. [Running the Application](#-running-the-application)
-7. [Database Schema (SQLite)](#-database-schema-sqlite)
-8. [Model Training & Custom Datasets](#-model-training--custom-datasets)
-9. [Automated Testing](#-automated-testing)
-10. [College Evaluation & Viva Voce Q&A](#-college-evaluation--viva-voce-qa)
-
----
-
-## ?? Project Objectives
+## Project Objectives
 1. **Product Detection & Localization**: Detect retail merchandise with bounding boxes using YOLOv8n (nano variant).
 2. **Product Counting**: Automatically count inventory by category (bottles, cans, boxes, etc.) and shelf zone.
 3. **Empty / Low-Stock Area Detection**: Identify vacant shelf segments, calculate percentage occupancy, and flag low-stock thresholds.
@@ -44,6 +28,7 @@ Developed strictly in accordance with the project's **Overview**, **Product Requ
 6. **Interactive Dashboard & Reporting**: Visualize side-by-side computer vision overlays, telemetry charts, and provide downloadable CSV audits and annotated images.
 
 ---
+
 ## ✨ Key Features
 
 - 📷 **Shelf Image Analysis** — Upload retail shelf images for AI-based analysis.
@@ -156,7 +141,7 @@ retail_shelf_monitoring/
 
 ---
 
-## ?? File-by-File Breakdown
+## File-by-File Breakdown
 
 | File Path | Description & Responsibility |
 | :--- | :--- |
@@ -174,7 +159,7 @@ retail_shelf_monitoring/
 
 ---
 
-## ?? Installation & Setup Guide
+## Installation & Setup Guide
 
 ### 1. Prerequisites
 - **Operating System**: Windows 10/11, macOS, or Ubuntu Linux
@@ -206,7 +191,7 @@ pip install -r requirements.txt
 
 ---
 
-## ?? Running the Application
+## Running the Application
 
 ### Step 1: Generate Sample Images & Initialize Database
 Run the sample data generator script to populate initial demonstration scenarios:
@@ -299,7 +284,7 @@ These documents provide detailed information about the project requirements, fun
   
 ---
 
-## ??? Database Schema (SQLite)
+## Database Schema (SQLite)
 
 As specified in TRD Section 9, the database `data/shelf_monitoring.db` maintains three primary relational tables:
 
@@ -347,7 +332,7 @@ CREATE TABLE reports (
 
 ---
 
-## ?? Model Training & Custom Datasets
+## Model Training & Custom Datasets
 
 To fine-tune YOLOv8n on public datasets (e.g., SKU-110K, Grocery Store Dataset, or Roboflow):
 
@@ -378,7 +363,7 @@ To fine-tune YOLOv8n on public datasets (e.g., SKU-110K, Grocery Store Dataset, 
 
 ---
 
-## ?? College Evaluation & Viva Voce Q&A
+## College Evaluation & Viva Voce Q&A
 
 ### Q1: Why was YOLOv8n chosen over other architectures like Faster R-CNN or SSD?
 **Answer:** YOLOv8n (nano variant) achieves single-stage real-time inference (approximately 1?3 seconds per frame on standard laptop CPU) with a very small model footprint (~6.5MB) while maintaining high mean Average Precision (mAP@0.5 > 0.6). Two-stage detectors like Faster R-CNN are computationally prohibitive for local execution without dedicated high-end GPUs.
