@@ -79,7 +79,8 @@ flowchart TD
     F --> G[Streamlit Web Dashboard]
     G --> H[Charts & Alerts]
     G --> I[Reports & Export]
----
+    
+*```*
 
 ## Project Directory Structure
 
