@@ -59,7 +59,6 @@ Retail stores need efficient ways to monitor shelf availability, product placeme
 ---
 
 ## System Architecture & Workflow
-
 ```mermaid
 graph TD
     %% Custom Styling Classes for Colors & Layers
@@ -79,17 +78,17 @@ graph TD
     end
 
     subgraph subg_3 ["3. ANALYTICS LAYER"]
-        D --> E1[Product Counting]
-        D --> E2[Empty-Space Detection]
-        D --> E3[Misplacement Detection]
-        D --> E4[Occupancy Analysis]
+        D --> EA[Product Counting]
+        D --> EB[Empty-Space Detection]
+        D --> EC[Misplacement Detection]
+        D --> ED[Occupancy Analysis]
     end
 
     subgraph subg_4 ["4. STORAGE & DASHBOARD LAYER"]
-        E1 --> F[SQLite Database]
-        E2 --> F
-        E3 --> F
-        E4 --> F
+        EA --> F[SQLite Database]
+        EB --> F
+        EC --> F
+        ED --> F
         F --> G[Streamlit Web Dashboard]
         G --> H[Charts & Alerts]
         G --> I[Reports & Export]
@@ -99,9 +98,8 @@ graph TD
     class subg_1,subg_2,subg_3,subg_4 layerStyle;
     class A,B nodeBlue;
     class C,D nodePurple;
-    class E1,E2,E3,E4 nodeGreen;
+    class EA,EB,EC,ED nodeGreen;
     class F,G,H,I nodeOrange;
-``` <-- Make sure these closing backticks are are here !
 
 ## Project Directory Structure
 
