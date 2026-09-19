@@ -61,26 +61,24 @@ Retail stores need efficient ways to monitor shelf availability, product placeme
 ## System Architecture & Workflow
 
 ```mermaid
-## System Architecture & Workflow
-
 flowchart TD
-    A[Image Input<br>JPG / PNG] --> B[Preprocessing<br>OpenCV / PIL<br>Resize & Normalize]
-    B --> C[YOLOv8 Object Detection<br>Products & Bounding Boxes]
+    A[Image Input JPG / PNG] --> B[Preprocessing]
+    B --> C[YOLOv8 Object Detection]
     C --> D[Shelf Analysis]
 
-    D --> D1[Product Counting]
-    D --> D2[Empty-Space Detection]
-    D --> D3[Misplacement Detection]
-    D --> D4[Occupancy Analysis]
+    D --> E1[Product Counting]
+    D --> E2[Empty-Space Detection]
+    D --> E3[Misplacement Detection]
+    D --> E4[Occupancy Analysis]
 
-    D1 --> E[SQLite Database]
-    D2 --> E
-    D3 --> E
-    D4 --> E
+    E1 --> F[SQLite Database]
+    E2 --> F
+    E3 --> F
+    E4 --> F
 
-    E --> F[Streamlit Web Dashboard]
-    F --> G[Charts & Alerts]
-    F --> H[Reports & Export]
+    F --> G[Streamlit Web Dashboard]
+    G --> H[Charts & Alerts]
+    G --> I[Reports & Export]
 ---
 
 ## Project Directory Structure
