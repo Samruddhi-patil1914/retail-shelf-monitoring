@@ -100,6 +100,7 @@ graph TD
     class C,D nodePurple;
     class EA,EB,EC,ED nodeGreen;
     class F,G,H,I nodeOrange;
+```
 
 ## Project Directory Structure
 
