@@ -7,6 +7,7 @@
 ![Database](https://img.shields.io/badge/Database-SQLite-yellow?style=for-the-badge&logo=sqlite&logoColor=black)
 ![Data](https://img.shields.io/badge/Data-Pandas-blue?style=for-the-badge&logo=pandas&logoColor=white)
 ![Numerical](https://img.shields.io/badge/Numerical-NumPy-purple?style=for-the-badge&logo=numpy&logoColor=white)
+[![Streamlit](https://img.shields.io/badge/Streamlit-App-red?style=for-the-badge&logo=streamlit&logoColor=white)](https://retail-shelf-monitoring.streamlit.app)
 
 > **B.Sc. Data Science — Third Year Project**
 
