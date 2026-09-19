@@ -101,6 +101,7 @@ graph TD
     class C,D nodePurple;
     class E1,E2,E3,E4 nodeGreen;
     class F,G,H,I nodeOrange;
+``` <-- Make sure these closing backticks are are here !
 
 ## Project Directory Structure
 
