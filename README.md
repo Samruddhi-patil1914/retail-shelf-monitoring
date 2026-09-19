@@ -61,26 +61,46 @@ Retail stores need efficient ways to monitor shelf availability, product placeme
 ## System Architecture & Workflow
 
 ```mermaid
-flowchart TD
-    A[Image Input JPG / PNG] --> B[Preprocessing]
-    B --> C[YOLOv8 Object Detection]
-    C --> D[Shelf Analysis]
+graph TD
+    %% Custom Styling Classes for Colors & Layers
+    classDef layerStyle fill:#1e1e2f,stroke:#6c5ce7,stroke-width:2px,color:#fff;
+    classDef nodeBlue fill:#0984e3,stroke:#74b9ff,stroke-width:2px,color:#fff;
+    classDef nodePurple fill:#6c5ce7,stroke:#a29bfe,stroke-width:2px,color:#fff;
+    classDef nodeGreen fill:#00b894,stroke:#55efc4,stroke-width:2px,color:#fff;
+    classDef nodeOrange fill:#e17055,stroke:#fab1a0,stroke-width:2px,color:#fff;
 
-    D --> E1[Product Counting]
-    D --> E2[Empty-Space Detection]
-    D --> E3[Misplacement Detection]
-    D --> E4[Occupancy Analysis]
+    subg_1["1. INPUT & PREPROCESSING LAYER"]
+        A[Image Input JPG / PNG] --> B[Preprocessing OpenCV / PIL Resize & Normalize]
+    end
 
-    E1 --> F[SQLite Database]
-    E2 --> F
-    E3 --> F
-    E4 --> F
+    subg_2["2. DETECTION LAYER"]
+        B --> C[YOLOv8 Object Detection Products & Bounding Boxes]
+        C --> D[Shelf Analysis]
+    end
 
-    F --> G[Streamlit Web Dashboard]
-    G --> H[Charts & Alerts]
-    G --> I[Reports & Export]
-    
-*```*
+    subg_3["3. ANALYTICS LAYER"]
+        D --> E1[Product Counting]
+        D --> E2[Empty-Space Detection]
+        D --> E3[Misplacement Detection]
+        D --> E4[Occupancy Analysis]
+    end
+
+    subg_4["4. STORAGE & DASHBOARD LAYER"]
+        E1 --> F[SQLite Database]
+        E2 --> F
+        E3 --> F
+        E4 --> F
+        F --> G[Streamlit Web Dashboard]
+        G --> H[Charts & Alerts]
+        G --> I[Reports & Export]
+    end
+
+    %% Apply Styles to Subgraphs and Nodes
+    class subg_1,subg_2,subg_3,subg_4 layerStyle;
+    class A,B nodeBlue;
+    class C,D nodePurple;
+    class E1,E2,E3,E4 nodeGreen;
+    class F,G,H,I nodeOrange;
 
 ## Project Directory Structure
 
